@@ -19697,19 +19697,22 @@ if (reversed == null) { reversed = false; }
 		    // SAAT MENGETIK
 		    // ==================================================
 		
-		    inputNamaHP.addEventListener("input", function() {
-		
-		        this.masuknama.text = inputNamaHP.value;
-		
-		        if (inputNamaHP.value.trim().length > 0) {
-		            this.btnmasuk.visible = true;
-		        } else {
-		            this.btnmasuk.visible = false;
-		        }
-		
-		        this.stage.update();
-		
-		    }.bind(this));
+		 inputNamaHP.addEventListener("input", function() {
+
+  		  this.masuknama.text = inputNamaHP.value;
+
+  			  if (inputNamaHP.value.trim().length > 0) {
+    		    this.btnmasuk.visible = true;
+    		    this.btnmasuk.alpha = 1;
+      			  this.btnmasuk.mouseEnabled = true;
+		        this.btnmasuk.cursor = "pointer";
+			    } else {
+    		    this.btnmasuk.visible = false;
+		    }
+
+ 			   this.stage.update();
+
+		}.bind(this));
 		
 		
 		    // ==================================================
