@@ -236,13 +236,11 @@ var frameMusikSebelumnya = -1;
 // ========================================
 
 function mulaiMusik() {
-
     if (!musikAktif) {
         return;
     }
 
-    // PENTING:
-    // Tunggu sampai exportRoot sudah dibuat
+    // Pastikan exportRoot sudah tersedia
     if (!exportRoot) {
         return;
     }
@@ -255,11 +253,7 @@ function mulaiMusik() {
     }
 
     musikLatar.play().catch(function(error) {
-
-        console.log(
-            "Musik menunggu interaksi pengguna."
-        );
-
+        console.log("Musik menunggu interaksi pengguna.");
     });
 }
 
@@ -279,11 +273,14 @@ function hentikanMusik() {
 // DAN PLAY LAGI SETELAH KELUAR
 // ========================================
 
+// ========================================
+// OTOMATIS STOP FRAME 108
+// DAN PLAY LAGI SETELAH KELUAR
+// ========================================
+
 createjs.Ticker.on("tick", function() {
 
-    // PENTING:
-    // Jangan akses currentFrame sebelum
-    // exportRoot selesai dibuat.
+    // Tunggu sampai exportRoot sudah tersedia
     if (!exportRoot) {
         return;
     }
@@ -301,9 +298,7 @@ createjs.Ticker.on("tick", function() {
     // ==============================
 
     if (frameSekarang === 108) {
-
         hentikanMusik();
-
     }
 
     // ==============================
@@ -311,13 +306,11 @@ createjs.Ticker.on("tick", function() {
     // ==============================
 
     else {
-
         if (musikAktif) {
-
             mulaiMusik();
-
         }
     }
+
 });
 
 // ========================================
