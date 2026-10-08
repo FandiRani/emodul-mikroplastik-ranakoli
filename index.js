@@ -19627,8 +19627,10 @@ if (reversed == null) { reversed = false; }
 		// ==================================================
 		
 		this.masuknama.text = "";
-		this.btnmasuk.visible = false;
-		
+		this.btnmasuk.visible = true;
+		this.btnmasuk.alpha = 1;
+		this.btnmasuk.mouseEnabled = true;
+		this.btnmasuk.cursor = "pointer";
 		var inputNamaHP = null;
 		
 		
