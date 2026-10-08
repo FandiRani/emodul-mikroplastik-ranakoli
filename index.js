@@ -19634,9 +19634,11 @@ if (reversed == null) { reversed = false; }
 		this.btnmasuk.cursor = "pointer";
 
 		this.btnmasuk.x = 900;
-		this.btnmasuk.y = 500;
-		this.btnmasuk.scaleX = 1;
-		this.btnmasuk.scaleY = 1;
+this.btnmasuk.y = 500;
+this.btnmasuk.scaleX = 2;
+this.btnmasuk.scaleY = 2;
+this.btnmasuk.alpha = 1;
+this.btnmasuk.visible = true;
 
 		var inputNamaHP = null;
 		
